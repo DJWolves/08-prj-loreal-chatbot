@@ -5,12 +5,31 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Avant Garde Gothic ITC W02 Med";
+  src:
+    local("Avant Garde Gothic ITC W02 Med"),
+    local("ITC Avant Garde Gothic W02 Medium"),
+    local("ITC Avant Garde Gothic Std Medium");
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family:
+    "Avant Garde Gothic ITC W02 Med", "Avant Garde Gothic", "Century Gothic",
+    Arial, sans-serif;
   color: #333;
   display: flex;
   justify-content: center;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
 }
 
 .page-wrapper {
@@ -18,10 +37,20 @@ body {
   max-width: 900px;
 }
 
+.brand-logo-row {
+  padding-top: 28px;
+}
+
+.brand-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
 /* header */
 .site-header {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 22px;
 }
 
 .site-title {
@@ -43,21 +72,27 @@ body {
   line-height: 1.5;
   overflow-y: auto;
   background: #fafafa;
-  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
 }
 
 /* messages */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  max-width: 80%;
 }
 
 .msg.user {
-  color: #000;
+  color: #920000;
+  align-self: flex-end;
+  text-align: right;
 }
 
 .msg.ai {
   color: #666666;
+  align-self: flex-start;
+  text-align: left;
 }
 
 /* input row */
@@ -99,7 +134,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #910000;
 }
 
 .chat-form button:focus {
@@ -139,5 +174,5 @@ body {
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #910000;
 }
